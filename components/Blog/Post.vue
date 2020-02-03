@@ -1,0 +1,35 @@
+<template>
+    <section class="post">
+        <div class="container">
+
+        <!-- header  -->
+        <div class="post-header">
+            <img :src="post.img" :alt="post.title">
+            <h1 class="title">{{ post.title }}</h1>
+            <p>{{  post.descr }}</p>
+        </div>
+
+        <!-- body  -->
+        <p v-html="post.content"></p>
+
+        </div>
+
+
+    </section>  
+</template>
+
+<script>
+
+export default {
+    props: {
+        post: {
+            type: Object,
+            required: true
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>
